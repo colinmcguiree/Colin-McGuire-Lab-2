@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://xaohbxc83yor"]
+
+[ext_resource type="Script" uid="uid://cqqgw2ipck20j" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://b1viroivhvwwt" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://bohixs8p2kvmj" path="res://player.gd" id="3_0hol4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_0e48y"]
+distance = 1.5999756
+
+[node name="Node2D" type="Node2D" unique_id=178880543]
+script = ExtResource("1_epypp")
+
+[node name="Player1" type="CharacterBody2D" parent="." unique_id=1549055026]
+position = Vector2(68.5, 557)
+scale = Vector2(0.6484375, 0.625)
+script = ExtResource("3_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1" unique_id=996705608]
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1" unique_id=1168039934]
+shape = SubResource("WorldBoundaryShape2D_0e48y")
